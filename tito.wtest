@@ -1,5 +1,5 @@
 import tito.*
-
+import bebidas.*
 describe "test de tito" {
 
     method initialize() {
@@ -29,4 +29,9 @@ describe "test de tito" {
         assert.equals(0,tito.velocidad())
     }
 
+    test "el rendimiento de un licuado con algunos nutrientes"{
+        licuadoDeFrutas.agregar(10)
+        licuadoDeFrutas.agregar(5)
+        assert.equals(30,licuadoDeFrutas.rendimiento(2))
+    }
 }
