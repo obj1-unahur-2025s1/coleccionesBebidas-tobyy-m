@@ -11,7 +11,7 @@ object cianuro{
 object licuadoDeFrutas{
     const nutrientes = []
     method agregar(cantNutrientes) = nutrientes.add(cantNutrientes)
-    method rendimiento(cantidad) = nutrientes.sum() * cantidad 
+    method rendimiento(cantidad) = nutrientes.sum() * cantidad
 }
 
 object aguaSaborizada{
@@ -21,9 +21,22 @@ object aguaSaborizada{
     }
     method rendimiento(cantidad) = 1 + bebida.rendimiento(cantidad)/4
 }
-
+object coctel{
+    const bebidas = []
+    method agregar(bebida) {
+        bebidas.add(bebida)
+    }
+    method quitar(bebida) {
+        bebidas.remove(bebida)
+    }
+    method rendimiento(cantidad) {
+        var rend = 1
+        bebidas.forEach({bebida => rend = rend * bebida.rendimiento(cantidad)})
+        return rend
+    }
+}
 object coctelSuave{
-    const bebidas = [wisky]
+    const bebidas = []
     method agregar(bebida) {
         bebidas.add(bebida)
     }

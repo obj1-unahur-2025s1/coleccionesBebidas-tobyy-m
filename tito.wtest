@@ -34,4 +34,16 @@ describe "test de tito" {
         licuadoDeFrutas.agregar(5)
         assert.equals(30,licuadoDeFrutas.rendimiento(2))
     }
+
+    test "Si consume un coctel  con un licuado de frutas, agua saborizada de tereré y wisky la velocidad es 275.625 "{
+        licuadoDeFrutas.agregar(10)
+        licuadoDeFrutas.agregar(20)
+        licuadoDeFrutas.agregar(5)
+        aguaSaborizada.bebida(terere)
+        coctel.agregar(licuadoDeFrutas)
+        coctel.agregar(aguaSaborizada)
+        coctel.agregar(wisky)
+        tito.consumir(1,coctel)
+        assert.equals(275.625, tito.velocidad())
+    }
 }
